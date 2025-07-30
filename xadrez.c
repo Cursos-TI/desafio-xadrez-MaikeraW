@@ -15,28 +15,88 @@ do
         switch (peca) //Depois de selecionar a peça é possível escolher quantas casas andar
     {
         case 1:
+            printf("Em qual direção você quer mover a peça?\n");
+            printf("1. Direita\n");
+            printf("2. Esquerda\n");
+            printf("3. Cima\n");
+            printf("4. Baixo\n\n");
+            scanf("%d", &direcao);
+
             printf("Quantas casas você quer mover? (Max. 8)\n");
             scanf("%d", &casas);
             for ( casainicial = 1; casainicial <= casas; casainicial++)
             {
-                printf("Pra cima\n");
+                if (direcao == 1)
+                {
+                    printf("Pra direita\n");
+                }   if (direcao == 2)
+                    {
+                      printf("Pra esquerda\n");  
+                    } if (direcao == 3)
+                    {
+                        printf("Pra cima\n"); 
+                    }   if (direcao == 4)
+                    {
+                        printf("Pra baixo\n"); 
+                    }
             }
             break;
         case 2:
+            printf("Em qual direção você quer mover a peça?\n");
+            printf("1. Superior Direita\n");
+            printf("2. Supetior Esquerda\n");
+            printf("3. Inferior Direita\n");
+            printf("4. Inferior Esquerda\n\n");
+            scanf("%d", &direcao);
+
             printf("Quantas casas você quer mover? (Max. 8)\n");
             scanf("%d", &casas);
             for ( casainicial = 1; casainicial <= casas; casainicial++)
             {
-                printf("Pra cima\n");
-                printf("Pra direita\n");
+                if (direcao == 1)
+                {
+                    printf("Pra direita\n");
+                    printf("Pra cima\n");
+                }   if (direcao == 2)
+                    {
+                      printf("Pra esquerda\n");
+                      printf("Pra cima\n");  
+                    } if (direcao == 3)
+                    {
+                        printf("Pra direita\n");
+                        printf("Pra baixo\n"); 
+                    }   if (direcao == 4)
+                    {
+                        printf("Pra esquerda\n");
+                        printf("Pra baixo\n"); 
+                    }
             }
             break;
         case 3:
+            printf("Em qual direção você quer mover a peça?\n");
+            printf("1. Direita\n");
+            printf("2. Esquerda\n");
+            printf("3. Cima\n");
+            printf("4. Baixo\n\n");
+            scanf("%d", &direcao);
+
             printf("Quantas casas você quer mover? (Max. 8)\n");
             scanf("%d", &casas);
             for ( casainicial = 1; casainicial <= casas; casainicial++)
             {
-                printf("Pra esquerda\n");
+                if (direcao == 1)
+                {
+                    printf("Pra direita\n");
+                }   if (direcao == 2)
+                    {
+                      printf("Pra esquerda\n");  
+                    } if (direcao == 3)
+                    {
+                        printf("Pra cima\n"); 
+                    }   if (direcao == 4)
+                    {
+                        printf("Pra baixo\n"); 
+                    }
             }
             break;
         default:
