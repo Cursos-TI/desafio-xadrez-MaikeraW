@@ -4,7 +4,7 @@ int main() {
     int peca, casas, direcao, casainicial;
 
 do
-{
+{       //Menu de qual peça mover
     printf("\nQual peça você gostaria de mover?\n");
     printf("1. Torre\n");
     printf("2. Bispo\n");
@@ -12,7 +12,7 @@ do
     printf("4. Sair!\n");
     scanf("%d", &peca);
 
-        switch (peca)
+        switch (peca) //Depois de selecionar a peça é possível escolher quantas casas andar
     {
         case 1:
             printf("Quantas casas você quer mover? (Max. 8)\n");
