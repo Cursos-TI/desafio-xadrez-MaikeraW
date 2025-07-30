@@ -107,7 +107,7 @@ do
             printf("3. Cima\n");
             printf("4. Baixo\n\n");
             scanf("%d", &direcao);
-            printf("Com quantas casas você quer iniciar o movimento? (1 ou 2\n");
+            printf("Com quantas casas você quer iniciar o movimento? (1 ou 2)\n");
             scanf("%d",&casas);
 
             printf("Em qual direção você quer terminar o movimento da peça?\n");
@@ -122,7 +122,98 @@ do
                     printf("2. Esquerda\n");
                     scanf("%d", &direcao2);
                 }
-                printf("VAI IMPRIMIR A DIREÇÃO AQUI\n\n");
+
+
+                if (casas == 1) //Imprimindo o primeiro movimento simples do cavalo - quando for uma casa
+                {
+                    if (direcao == 1)
+                    {
+                        printf("Pra Direita\n");
+                    }
+                    if (direcao == 2)
+                    {
+                        printf("Pra Esquerda\n");
+                    }
+                    if (direcao == 3)
+                    {
+                        printf("Pra Cima\n");
+                    }
+                    if (direcao == 4)
+                    {
+                        printf("Pra Baixo\n");
+                    } if (direcao == 1 || direcao == 2) //Imprimindo o segundo movimento do cavalo, nesse caso é movimento duplo
+                {
+                    if (direcao2 == 1)
+                    {
+                        printf("Pra Cima\n");
+                        printf("Pra Cima\n");
+                    }
+                    if (direcao2 == 2)
+                    {
+                        printf("Pra Baixo\n");
+                        printf("Pra Baixo\n");
+                    }
+                }
+                if (direcao == 3 || direcao == 4)
+                {
+                    if (direcao2 == 1)
+                    {
+                        printf("Pra Direita\n");
+                        printf("Pra Direita\n");
+                    }
+                    if (direcao2 == 2)
+                    {
+                        printf("Pra Esquerda\n");
+                        printf("Pra Esquerda\n");
+                    }}
+                }
+                if (casas == 2) //imprimindo o primeiro movimento do cavalo quando é duplo - 2 casas por vez
+                {
+                    if (direcao == 1)
+                    {
+                        printf("Pra Direita\n");
+                        printf("Pra Direita\n");
+                    }
+                    if (direcao == 2)
+                    {
+                        printf("Pra Esquerda\n");
+                        printf("Pra Esquerda\n");
+                    }
+                    if (direcao == 3)
+                    {
+                        printf("Pra Cima\n");
+                        printf("Pra Cima\n");
+                    }
+                    if (direcao == 4)
+                    {
+                        printf("Pra Baixo\n");
+                        printf("Pra Baixo\n");
+                    }
+                if (direcao == 1 || direcao == 2)
+                {
+                    if (direcao2 == 1)
+                    {
+                        printf("Pra Cima\n");
+                    }
+                    if (direcao2 == 2)
+                    {
+                        printf("Pra Baixo\n");
+                    }
+                    
+                }
+                if (direcao == 3 || direcao == 4)
+                {
+                    if (direcao2 == 1)
+                    {
+                        printf("Pra Direita\n");
+                    }
+                    if (direcao2 == 2)
+                    {
+                        printf("Pra Esquerda\n");
+                    }
+                    
+                }
+                }
                 break;
         default:
             printf("Você saiu do jogo!\n");
@@ -158,4 +249,3 @@ return 0;
 
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
-
