@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int peca, casas, direcao, casainicial;
+    int peca, casas, direcao, casainicial, direcao2;
 
 do
 {       //Menu de qual peça mover
@@ -9,7 +9,8 @@ do
     printf("1. Torre\n");
     printf("2. Bispo\n");
     printf("3. Rainha\n");
-    printf("4. Sair!\n");
+    printf("4. Cavalo\n");
+    printf("5. Sair!\n");
     scanf("%d", &peca);
 
         switch (peca) //Depois de selecionar a peça é possível escolher quantas casas andar
@@ -99,14 +100,37 @@ do
                     }
             }
             break;
+        case 4:
+            printf("Em qual direção você quer iniciar o movimento da peça?\n");
+            printf("1. Direita\n");
+            printf("2. Esquerda\n");
+            printf("3. Cima\n");
+            printf("4. Baixo\n\n");
+            scanf("%d", &direcao);
+            printf("Com quantas casas você quer iniciar o movimento? (1 ou 2\n");
+            scanf("%d",&casas);
+
+            printf("Em qual direção você quer terminar o movimento da peça?\n");
+                if (direcao == 1 || direcao == 2)
+                {
+                    printf("1. Cima\n");
+                    printf("2. Baixo\n");
+                    scanf("%d", &direcao2);
+                } if (direcao == 3 || direcao == 4)
+                {
+                    printf("1. Direita\n");
+                    printf("2. Esquerda\n");
+                    scanf("%d", &direcao2);
+                }
+                printf("VAI IMPRIMIR A DIREÇÃO AQUI\n\n");
+                break;
         default:
             printf("Você saiu do jogo!\n");
             break;
     }
-} while (peca != 4);
+} while (peca != 5);
 return 0;
 }
-
 // Desafio de Xadrez - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
@@ -135,4 +159,3 @@ return 0;
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
-    
